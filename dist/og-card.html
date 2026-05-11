@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kith — OG card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; overflow: hidden; background: #1a1410; }
+      body {
+        font-family: 'Instrument Sans', sans-serif;
+        color: #f8f4ed;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+      }
+      /* warm vignette */
+      body::before {
+        content: '';
+        position: absolute; inset: 0;
+        background:
+          radial-gradient(ellipse 60% 55% at 50% 50%, rgba(138,58,74,0.18), transparent 70%),
+          radial-gradient(ellipse at center, transparent 30%, rgba(18,13,10,0.5) 75%, rgba(18,13,10,0.85) 100%);
+        pointer-events: none;
+        z-index: 2;
+      }
+      /* network graph backdrop */
+      .graph {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        opacity: 0.85;
+      }
+      .graph line {
+        stroke: #f8f4ed;
+        stroke-opacity: 0.18;
+        stroke-width: 1;
+      }
+      .graph circle.peer {
+        fill: #9a8578;
+        opacity: 0.85;
+      }
+      .graph circle.peer.warm { fill: #b8967e; }
+      .graph circle.peer.cool { fill: #7d6b5c; }
+      .graph circle.peer.gold { fill: #c4a582; }
+      .graph circle.center {
+        fill: #8a3a4a;
+        filter: drop-shadow(0 0 18px rgba(168,72,90,0.55));
+      }
+      .glow {
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 520px; height: 520px;
+        background: radial-gradient(circle, rgba(138,58,74,0.32) 0%, transparent 60%);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .content {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding: 0 100px;
+      }
+      .eyebrow {
+        font-size: 18px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #9a8578;
+        margin-bottom: 36px;
+        font-weight: 500;
+      }
+      h1 {
+        font-family: 'Fraunces', serif;
+        font-weight: 300;
+        font-size: 108px;
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+        color: #f8f4ed;
+        font-feature-settings: 'ss01' 1;
+      }
+      h1 em {
+        font-style: italic;
+        font-weight: 300;
+        color: #f8f4ed;
+        display: block;
+      }
+      .tag {
+        margin-top: 44px;
+        font-family: 'Fraunces', serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 26px;
+        color: #a8485a;
+        letter-spacing: -0.005em;
+      }
+      .corner {
+        position: absolute;
+        z-index: 3;
+        bottom: 44px; left: 60px;
+        font-family: 'Fraunces', serif;
+        font-size: 32px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: #f8f4ed;
+      }
+      .corner-r {
+        position: absolute;
+        z-index: 3;
+        bottom: 44px; right: 60px;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #9a8578;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background network graph -->
+    <svg class="graph" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+      <!-- edges from center to peers -->
+      <g>
+        <line x1="600" y1="315" x2="180" y2="120" />
+        <line x1="600" y1="315" x2="320" y2="510" />
+        <line x1="600" y1="315" x2="120" y2="380" />
+        <line x1="600" y1="315" x2="980" y2="180" />
+        <line x1="600" y1="315" x2="1060" y2="430" />
+        <line x1="600" y1="315" x2="880" y2="540" />
+        <line x1="600" y1="315" x2="460" y2="90" />
+        <line x1="600" y1="315" x2="240" y2="230" />
+        <line x1="600" y1="315" x2="380" y2="430" />
+        <line x1="600" y1="315" x2="780" y2="100" />
+        <line x1="600" y1="315" x2="1010" y2="290" />
+        <line x1="600" y1="315" x2="700" y2="540" />
+        <!-- a few peer-to-peer -->
+        <line x1="180" y1="120" x2="240" y2="230" />
+        <line x1="320" y1="510" x2="380" y2="430" />
+        <line x1="980" y1="180" x2="1010" y2="290" />
+        <line x1="880" y1="540" x2="700" y2="540" />
+      </g>
+      <!-- peer nodes -->
+      <circle class="peer warm" cx="180" cy="120" r="6.5" />
+      <circle class="peer cool" cx="320" cy="510" r="5" />
+      <circle class="peer" cx="120" cy="380" r="6" />
+      <circle class="peer gold" cx="980" cy="180" r="7" />
+      <circle class="peer" cx="1060" cy="430" r="5.5" />
+      <circle class="peer warm" cx="880" cy="540" r="6" />
+      <circle class="peer cool" cx="460" cy="90" r="5" />
+      <circle class="peer" cx="240" cy="230" r="6" />
+      <circle class="peer gold" cx="380" cy="430" r="5.5" />
+      <circle class="peer" cx="780" cy="100" r="5" />
+      <circle class="peer warm" cx="1010" cy="290" r="6" />
+      <circle class="peer cool" cx="700" cy="540" r="5" />
+      <!-- center node -->
+      <circle class="center" cx="600" cy="315" r="22" />
+    </svg>
+
+    <div class="glow"></div>
+
+    <main class="content">
+      <div class="eyebrow">Kith · Beta launches June 1, 2026</div>
+      <h1>
+        Your people,
+        <em>remembered.</em>
+      </h1>
+      <div class="tag">A private space for the people in your life.</div>
+    </main>
+
+    <div class="corner">Kith</div>
+    <div class="corner-r">usekith.app</div>
+  </body>
+</html>
