@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account & Data Deletion — Kith</title>
+<style>
+:root {
+  --bg: #14100c;
+  --ivory: #f8f4ed;
+  --muted: #8a8378;
+  --burgundy: #8a3a4a;
+  --hairline: rgba(248, 244, 237, 0.12);
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ivory);
+  font-family: var(--sans);
+  line-height: 1.7;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+}
+.container { max-width: 680px; margin: 0 auto; }
+h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+  font-family: var(--serif);
+}
+h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.35rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+p, li {
+  font-size: 0.95rem;
+  color: var(--ivory);
+  margin-bottom: 0.75rem;
+}
+ol, ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+ol li, ul li {
+  margin-bottom: 0.5rem;
+}
+strong {
+  color: var(--ivory);
+}
+a {
+  color: var(--ivory);
+  text-decoration: underline;
+  text-decoration-color: var(--burgundy);
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration-color: var(--ivory);
+}
+.divider {
+  border: 0;
+  border-top: 0.5px solid var(--hairline);
+  margin: 2.5rem 0;
+}
+.contact {
+  background: rgba(248, 244, 237, 0.04);
+  border-left: 2px solid var(--burgundy);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+}
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid var(--hairline);
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Account & Data Deletion</h1>
+  <p class="subtitle">How to permanently remove your Kith account and all associated data.</p>
+
+  <p>Kith is a personal relationship app developed by <strong>Zyvo Studios</strong>. We respect your right to delete your account and your data at any time.</p>
+
+  <h2>How to delete your account</h2>
+  <p>You can delete your Kith account directly from the app:</p>
+  <ol>
+    <li>Open the Kith app on your Android device.</li>
+    <li>Tap <strong>Settings</strong> in the bottom navigation bar.</li>
+    <li>Scroll to the <strong>Danger Zone</strong> section.</li>
+    <li>Tap <strong>Delete Account</strong>.</li>
+    <li>Type <strong>DELETE</strong> in the confirmation dialog to confirm.</li>
+    <li>Your account and all associated data will be permanently removed.</li>
+  </ol>
+
+  <p>If you are unable to access the app or prefer to request deletion via email, you can contact us at the address below.</p>
+
+  <div class="contact">
+    <p>To request account deletion by email, write to: <a href="mailto:support@usekith.app">support@usekith.app</a></p>
+    <p>Please include the email address associated with your Kith account. We will process the request within 30 days.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h2>What data is deleted</h2>
+  <p>When you delete your Kith account, the following data is permanently erased:</p>
+  <ul>
+    <li>Your account credentials (email and password hash)</li>
+    <li>All people, relationships, and custom fields you created</li>
+    <li>All photos you uploaded</li>
+    <li>Your preferences (theme, colorblind mode, consent records)</li>
+    <li>Any refresh tokens or session data</li>
+  </ul>
+
+  <h2>What data is retained, and for how long</h2>
+  <p>For operational, security, and legal reasons, a limited amount of data may persist briefly after deletion:</p>
+  <ul>
+    <li><strong>Database backups (up to 30 days):</strong> Routine encrypted backups may contain your data until the backup is rotated out. After 30 days, all backups will be free of your data.</li>
+    <li><strong>Server logs (up to 90 days):</strong> Anonymized server logs (timestamps, IP addresses, request paths) may persist for up to 90 days for security and abuse-prevention purposes. These logs do not contain your personal data or content.</li>
+    <li><strong>Legal and financial records (up to 7 years):</strong> If you ever made a paid transaction with Kith, transaction records may be retained for up to 7 years to comply with Dutch tax and accounting law. These records do not contain your relationship data — only transaction metadata (date, amount, anonymized identifier).</li>
+  </ul>
+
+  <h2>Export your data first</h2>
+  <p>If you would like a copy of your data before deleting your account, Kith provides a built-in export feature:</p>
+  <ol>
+    <li>Open the Kith app.</li>
+    <li>Tap <strong>Settings</strong>.</li>
+    <li>Under the <strong>Data</strong> section, tap <strong>Export my data</strong>.</li>
+    <li>Choose where to save the exported JSON file.</li>
+  </ol>
+
+  <p>The export contains all your people, relationships, custom fields, and metadata in a portable format.</p>
+
+  <hr class="divider">
+
+  <h2>Questions or concerns</h2>
+  <p>If you have questions about your data, the deletion process, or your privacy rights more broadly, you can reach us at <a href="mailto:privacy@zyvostudios.com">privacy@zyvostudios.com</a>.</p>
+
+  <p>For more detail on how Kith handles your data, see our <a href="https://usekith.app/kith_privacy_policy.html">Privacy Policy</a>.</p>
+
+  <div class="footer">
+    Zyvo Studios · <a href="https://usekith.app">usekith.app</a><br>
+    Last updated: May 16, 2026
+  </div>
+</div>
+</body>
+</html>
