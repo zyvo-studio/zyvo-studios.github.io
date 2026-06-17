@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Admin is not part of the public site (defense in depth — also removed from
+# the deployment).
+Disallow: /admin/
+
+Sitemap: https://usekith.app/sitemap.xml
